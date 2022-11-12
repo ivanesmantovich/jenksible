@@ -1,0 +1,19 @@
+---
+- name: cp and unzip and rm
+  hosts: localhost
+  become: yes
+  
+  tasks:
+  - name: cp
+    ansible.builtin.copy:
+      src: "/abcde/distr/abc-v.{{ version }}.zip"
+      dest: /abcde/app/front
+  - name: unzip
+    ansible.builtin.unarchive:
+      src: "/abcde/app/front/abc-v.{{ version }}.zip"
+      dest: /abcde/app/front
+      keep_newer: yes
+  - name: rm
+    ansible.builtin.file:
+      path: "/abcde/app/front/abc-v.{{ version }}.zip"
+      state: absent

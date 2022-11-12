@@ -10,8 +10,12 @@ pipeline {
 
 		stage("move-and-zip") {
 			steps {
-				sh "zip -r /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip /var/lib/jenkins/workspace/jenksible_master"
+				sh "zip /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip /var/lib/jenkins/workspace/jenksible_master"
 			}	
+		}
+
+		stage("launch-ansible") {
+			
 		}
 
 	}
