@@ -7,9 +7,5 @@ pipeline {
 				echo "THERE IS A CHANGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
 			}
 		}
-		stage("changes-zip") {
-		}
-		stage("invoke-next-pipeline") {
-		}
 	}
 }
