@@ -3,9 +3,7 @@ pipeline {
 	
 	stages {
 		stage("changes-download") {
-			if (env.GIT_COMMIT != env.GIT_PREVIOUS_SUCCESSFUL_COMMIT) {
-				echo "THERE IS A CHANGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
-			}
+			git credentialsId: 'jenksible_id', url: 'https://github.com/ivanesmantovich/jenksible'
 		}
 	}
 }
