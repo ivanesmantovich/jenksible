@@ -10,7 +10,7 @@ pipeline {
 
 		stage("move-and-zip") {
 			steps {
-				sh "cd /var/lib/jenkins/workspace && zip -r /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip jenksible_master"
+				sh "cd /var/lib/jenkins/workspace && zip -r /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip jenksible_master/.* *"
 			}	
 		}
 	}
