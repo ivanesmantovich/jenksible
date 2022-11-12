@@ -13,5 +13,10 @@ pipeline {
 				sh "cd /var/lib/jenkins/workspace/jenksible_master && zip -r /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip ."
 			}	
 		}
+		stage("launch-ansible") {
+			steps {
+				sh('ansible-playbook jenksible.yml --extra-vars "version=${env.BUILD_NUMBER}"')
+			}
+		}
 	}
 }
