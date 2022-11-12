@@ -13,10 +13,5 @@ pipeline {
 				sh "zip /abcde/distr/abc-v.${env.BUILD_NUMBER}.zip /var/lib/jenkins/workspace/jenksible_master"
 			}	
 		}
-
-		stage("launch-ansible") {
-			
-		}
-
 	}
 }
