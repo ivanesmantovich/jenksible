@@ -5,7 +5,7 @@ pipeline {
 
 		if (env.GIT_COMMIT != env.GIT_PREVIOUS_SUCCESSFUL_COMMIT) {
 			stage("changes-download") {
-				echo "there is a change"
+				echo "THERE IS A CHANGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
 			}
 
 			stage("changes-zip") {
