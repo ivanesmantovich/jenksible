@@ -15,7 +15,9 @@ pipeline {
 		}
 		stage("launch-ansible") {
 			steps {
-				sh('ansible-playbook jenksible.yml --extra-vars "version=${env.BUILD_NUMBER}"')
+				sh '''
+					ansible-playbook jenksible.yml --extra-vars "version=${env.BUILD_NUMBER}"
+				'''
 			}
 		}
 	}
