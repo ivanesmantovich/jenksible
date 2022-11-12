@@ -3,7 +3,9 @@ pipeline {
 	
 	stages {
 		stage("changes-download") {
-			git credentialsId: 'jenksible_id', url: 'https://github.com/ivanesmantovich/jenksible'
+			steps {
+				git credentialsId: 'jenksible_id', url: 'https://github.com/ivanesmantovich/jenksible'
+			}
 		}
 	}
 }
